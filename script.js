@@ -242,9 +242,21 @@ const price = function price(name, price) {
  console.log(name + " の値段は" + price * 1.10 + "円です。");
 }
 
-addTax(200, price)
+addTax(200, price);
 
 
+
+function addTax2(price2, func) {
+ const taxPrice2 = Math.round(price2 * 1.10);
+ const name2 = "玉ねぎ";
+ func(name2, price2);
+}
+
+const price2 = function price(name2, price2) {
+ console.log(name2 + " の値段は" + price2 * 1.10 + "円です。");
+}
+
+addTax2(400, price);
 
 
 //16
